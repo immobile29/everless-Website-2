@@ -46,7 +46,7 @@ window.EVERLESS_GALLERY = [
 // Tunnus on osoitteessa youtube.com/watch?v=TÄSTÄ_TULEE_TUNNUS
 window.EVERLESS_VIDEOS = [
   { title: "I Wanna Dance with Somebody", artist: "Whitney Houston", youtubeId: "ETzgYsCAyHc" },
-  { title: "You're Gonna Go Far, Kid",    artist: "The Offspring",   youtubeId: "" },
+  { title: "You're Gonna Go Far, Kid",    artist: "The Offspring",   youtubeId: "7olwNNpNZ38" },
 ];
 
 // Varatut päivät muodossa "VVVV-KK-PP". Lisää tai poista rivejä kun keikkoja varataan.
