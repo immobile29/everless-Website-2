@@ -1,0 +1,70 @@
+/*
+  TEEMAT – kaikki ilmeeseen liittyvät värit, fontit ja pyöristykset ovat tässä.
+  Vaihda teema tiedostossa data/site.config.js (theme: "western" tai "modern").
+  Voit muokata värejä muuttamalla arvoja alla.
+*/
+
+/* ---------- Western: lämmin lato- ja länsi-henkinen ilme ---------- */
+:root,
+[data-theme="western"] {
+  --bg: #16100c;
+  --bg-alt: #1e1611;
+  --surface: #2a1f17;
+  --surface-2: #35271d;
+  --text: #f4e9d8;
+  --muted: #bcaa90;
+  --accent: #e0a53a;          /* kulta */
+  --accent-hover: #f0b94f;
+  --accent-2: #b5472a;        /* ruoste */
+  --accent-contrast: #1a120b; /* teksti accent-värin päällä */
+  --border: rgba(244, 233, 216, 0.14);
+  --focus: #f0b94f;
+
+  --font-display: "Rye", "Georgia", serif;
+  --font-heading: "Oswald", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --heading-transform: uppercase;
+  --heading-spacing: 0.04em;
+  --heading-weight: 500;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --btn-radius: 4px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  --hero-bg: radial-gradient(900px 500px at 85% 20%, rgba(224, 165, 58, 0.16), transparent 70%), var(--bg);
+  --brand-transform: none;
+  --brand-spacing: 0.02em;
+}
+
+/* ---------- Modern: neutraali, siisti ilme kaikille genreille ---------- */
+[data-theme="modern"] {
+  --bg: #0d0e12;
+  --bg-alt: #13151b;
+  --surface: #1a1d25;
+  --surface-2: #232733;
+  --text: #f2f3f7;
+  --muted: #9ea3b0;
+  --accent: #ff5d73;
+  --accent-hover: #ff7a8c;
+  --accent-2: #6c8cff;
+  --accent-contrast: #14060a;
+  --border: rgba(242, 243, 247, 0.12);
+  --focus: #6c8cff;
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --heading-transform: none;
+  --heading-spacing: -0.01em;
+  --heading-weight: 700;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --btn-radius: 999px;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+
+  --hero-bg: radial-gradient(900px 500px at 85% 20%, rgba(255, 93, 115, 0.18), transparent 70%), radial-gradient(700px 400px at 0% 100%, rgba(108, 140, 255, 0.14), transparent 70%), var(--bg);
+  --brand-transform: uppercase;
+  --brand-spacing: 0.18em;
+}

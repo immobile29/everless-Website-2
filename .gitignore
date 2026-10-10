@@ -1,0 +1,8 @@
+.DS_Store
+# Isot alkuperäiset videot ja kuvat eivät kuulu julkaisuun (verkkokokoiset kuvat ovat kansiossa assets/img)
+Reference songs/
+Band members/
+Barn bash 2026 photos/
+Wedding lahti/
+# Netlify-julkaisukansio (ei tarvita GitHub Pagesissa)
+deploy/
