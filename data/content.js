@@ -45,7 +45,7 @@ window.EVERLESS_GALLERY = [
 // Videot. Vie video YouTubeen (esim. listaamattomana) ja liitä tähän YouTube-tunnus.
 // Tunnus on osoitteessa youtube.com/watch?v=TÄSTÄ_TULEE_TUNNUS
 window.EVERLESS_VIDEOS = [
-  { title: "I Wanna Dance with Somebody", artist: "Whitney Houston", youtubeId: "" },
+  { title: "I Wanna Dance with Somebody", artist: "Whitney Houston", youtubeId: "ETzgYsCAyHc" },
   { title: "You're Gonna Go Far, Kid",    artist: "The Offspring",   youtubeId: "" },
 ];
 
