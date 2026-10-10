@@ -5,13 +5,14 @@
 
 // Bändin jäsenet ja DJ:t. roleKey viittaa kielitiedoston avaimeen.
 window.EVERLESS_MEMBERS = [
-  { name: "Juho",   roleKey: "role.drums",        img: "assets/img/members/juho.webp" },
-  { name: "Julita", roleKey: "role.keys",         img: "assets/img/members/julita.webp" },
-  { name: "Totti",  roleKey: "role.guitarVocals", img: "assets/img/members/totti.webp" },
-  { name: "Nixu",   roleKey: "role.bass",         img: "assets/img/members/nixu.webp" },
-  { name: "Jemina", roleKey: "role.vocals",       img: "assets/img/members/jemina.webp" },
+  // Aakkosjärjestyksessä
   { name: "Ana",    roleKey: "role.vocals",       img: "assets/img/members/ana.webp" },
   { name: "Erik",   roleKey: "role.guitar",       img: "assets/img/members/erik.webp" },
+  { name: "Jemina", roleKey: "role.vocals",       img: "assets/img/members/jemina.webp" },
+  { name: "Juho",   roleKey: "role.drums",        img: "assets/img/members/juho.webp" },
+  { name: "Julita", roleKey: "role.keys",         img: "assets/img/members/julita.webp" },
+  { name: "Nixu",   roleKey: "role.bass",         img: "assets/img/members/nixu.webp" },
+  { name: "Totti",  roleKey: "role.guitarVocals", img: "assets/img/members/totti.webp" },
 ];
 window.EVERLESS_DJS = [
   { name: "Jon", alias: "Aspec", roleKey: "role.dj", img: "assets/img/members/jon.webp" },
