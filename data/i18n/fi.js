@@ -27,7 +27,7 @@ window.EVERLESS_I18N.fi = {
   "services.title": "Tunnelmaa juuri teidän tapahtumaanne",
   "services.lead": "Räätälöimme illan sisällön juhlien mukaan. Kerro tapahtumastasi, niin suunnitellaan yhdessä, miten tuomme sinne tunnelmaa.",
   "services.band.title": "Live-bändi",
-  "services.band.text": "Seitsemän muusikkoa, kolme laulajaa ja lähes 50 biisiä rockista, popista ja countrysta. Tanssittavaa ja yhteislaulettavaa alusta loppuun.",
+  "services.band.text": "Seitsemän muusikkoa, kolme laulajaa ja {songs} biisiä rockista, popista ja countrysta. Tanssittavaa ja yhteislaulettavaa alusta loppuun.",
   "services.dj.title": "DJ-setti",
   "services.dj.text": "Tanssilattia täyteen DJ:mme setillä, kun haluatte keveämmän kokoonpanon tai jatkaa juhlia bändin jälkeen.",
   "services.combo.title": "Bändi ja DJ",

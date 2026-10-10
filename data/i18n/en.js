@@ -27,7 +27,7 @@ window.EVERLESS_I18N.en = {
   "services.title": "The right atmosphere for your event",
   "services.lead": "We tailor the evening to your celebration. Tell us about your event and we will plan together how to bring the atmosphere to it.",
   "services.band.title": "Live band",
-  "services.band.text": "Seven musicians, three vocalists and nearly 50 songs from rock, pop and country. Danceable and made for singing along from start to finish.",
+  "services.band.text": "Seven musicians, three vocalists and {songs} songs from rock, pop and country. Danceable and made for singing along from start to finish.",
   "services.dj.title": "DJ set",
   "services.dj.text": "Fill the dance floor with our DJ set when you want a lighter setup or want to keep the party going after the band.",
   "services.combo.title": "Band and DJ",
