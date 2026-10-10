@@ -202,29 +202,67 @@
     var p = row && row.querySelector(".progress");
     if (p && audio.duration) p.style.width = (audio.currentTime / audio.duration * 100) + "%";
   });
-  audio.addEventListener("ended", function () { player.key = null; stop(); });
+  // Tyhjä ääni: toisto käynnistetään heti napautuksen aikana, koska mobiiliselaimet (erityisesti iPhone)
+  // sallivat äänen vain suoraan käyttäjän napautuksesta. Oikea ääni vaihdetaan tilalle haun jälkeen.
+  var SILENT = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
+  function isSilent() { return audio.src.indexOf("data:") === 0; }
+  audio.addEventListener("ended", function () { if (isSilent()) return; player.key = null; stop(); });
+
+  function knownUrl(song) {
+    if (song.previewUrl) return song.previewUrl;
+    var st = window.EVERLESS_PREVIEWS || {};
+    if (st[song.key]) return st[song.key];
+    var c = cache.get(song.key);
+    return c || null; // null = ei vielä tiedossa tai ei löytynyt
+  }
+
+  function fail(song, row) {
+    if (player.key === song.key) { player.key = null; player.playing = false; }
+    var r = rowFor(song.key) || row;
+    if (r) { r.classList.remove("playing"); setBtn(r, "play", song); }
+  }
+
+  function startPlayback(song, row, url, retried) {
+    audio.src = url;
+    var p = audio.play();
+    return p.then(function () {
+      if (player.key !== song.key) return;
+      player.playing = true;
+      var r = rowFor(song.key) || row;
+      if (r) { r.classList.add("playing"); setBtn(r, "pause", song); }
+    }).catch(function () {
+      // Vanhentunut tai estetty osoite: yritetään kerran hakea tuore osoite suoraan iTunesista
+      if (retried || player.key !== song.key) return fail(song, row);
+      var st = window.EVERLESS_PREVIEWS || {};
+      delete st[song.key]; delete cache.store[song.key];
+      return getPreview(Object.assign({}, song, { previewUrl: null })).then(function (u) {
+        if (!u || player.key !== song.key) return fail(song, row);
+        return startPlayback(song, row, u, true);
+      }).catch(function () { fail(song, row); });
+    });
+  }
+
   function toggle(song, row) {
     if (player.key === song.key && player.playing) { stop(); return; }
-    if (player.key === song.key && !player.playing && audio.src) {
+    if (player.key === song.key && !player.playing && audio.src && !isSilent()) {
       audio.play(); player.playing = true; row.classList.add("playing"); setBtn(row, "pause", song); return;
     }
     stop();
     player.key = song.key; player.playing = false;
     row.classList.add("playing");
     setBtn(row, "loading", song);
+
+    var url = knownUrl(song);
+    if (url) { startPlayback(song, row, url, false); return; } // heti napautuksen aikana
+
+    // Osoite pitää hakea: avataan äänen toisto jo nyt tyhjällä äänellä
+    audio.src = SILENT;
+    var unlock = audio.play(); if (unlock && unlock.catch) unlock.catch(function () {});
     getPreview(song).then(function (u) {
       if (player.key !== song.key) return; // käyttäjä ehti valita toisen
-      if (!u) { player.key = null; markUnavailable(rowFor(song.key) || row); row.classList.remove("playing"); return; }
-      audio.src = u;
-      return audio.play().then(function () {
-        player.playing = true;
-        var r = rowFor(song.key); if (r) { r.classList.add("playing"); setBtn(r, "pause", song); }
-      });
-    }).catch(function () {
-      // Verkkovirhe tai estetty toisto: palautetaan painike ennalleen ilman virheilmoitusta
-      if (player.key === song.key) { player.key = null; player.playing = false; }
-      var r = rowFor(song.key); if (r) { r.classList.remove("playing"); setBtn(r, "play", song); }
-    });
+      if (!u) { audio.pause(); player.key = null; markUnavailable(rowFor(song.key) || row); row.classList.remove("playing"); return; }
+      return startPlayback(song, row, u, true);
+    }).catch(function () { fail(song, row); });
   }
 
   listEl.addEventListener("click", function (e) {
