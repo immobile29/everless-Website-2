@@ -89,7 +89,7 @@ window.EVERLESS_I18N.en = {
 
   "rep.eyebrow": "Repertoire",
   "rep.title": "Our songs",
-  "rep.lead": "{songs} songs across three genres. Press the play button for a 30-second preview of the original track. For requested songs, see the <a href=\"index.html#terms\">terms</a>.",
+  "rep.lead": "Press the play button for a 30-second preview of the original track. For requested songs, see the <a href=\"index.html#terms\">terms</a>.",
   "rep.all": "All",
   "rep.search": "Search artist or song",
   "rep.searchLabel": "Search songs",
