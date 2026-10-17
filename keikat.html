@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aikaisemmat keikat – Everless</title>
+  <meta name="description" content="Aikaisemmat keikat: videoita ja kuvia Everlessin esiintymisistä.">
+  <meta name="theme-color" content="#16100c">
+  <meta property="og:title" content="Everless – Cover band & DJs">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/band/band.webp">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Rye&family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/base.css">
+
+  <script src="data/site.config.js"></script>
+  <script src="js/gate.js"></script>
+  <script>
+    (function () {
+      var t = (new URLSearchParams(location.search).get("theme")) || window.EVERLESS_CONFIG.theme;
+      document.documentElement.setAttribute("data-theme", t === "modern" ? "modern" : "western");
+    })();
+  </script>
+</head>
+<body data-page="gigs">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Siirry sisältöön</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="page.gigs.eyebrow"></p>
+        <h1 data-i18n="page.gigs.title"></h1>
+        <p class="lead" data-i18n="page.gigs.lead"></p>
+      </div>
+    </section>
+
+    <!-- VIDEOT -->
+    <section class="section" id="videos">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="videos.eyebrow">Videot</p>
+          <h2 data-i18n="videos.title"></h2>
+          <p class="lead" data-i18n="videos.lead"></p>
+        </header>
+        <div class="card-grid cols-2" id="video-grid"></div>
+      </div>
+    </section>
+
+    <!-- GALLERIA -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galleria</p>
+          <h2 data-i18n="gallery.title"></h2>
+          <p class="lead" data-i18n="gallery.lead"></p>
+        </header>
+        <div class="gallery-featured" id="gallery-featured"></div>
+        <div class="gallery" id="gallery-grid"></div>
+        <p class="fineprint photo-credit" data-i18n="gallery.credit"></p>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="container">
+        <a class="btn" href="index.html#book" data-i18n="hero.cta">Pyydä tarjous</a>
+      </div>
+    </div>
+    </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
+    <button class="lb-btn lb-close" type="button" data-i18n-attr="aria-label:a11y.close">&times;</button>
+    <button class="lb-btn lb-prev" type="button" data-i18n-attr="aria-label:gallery.prev">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+    </button>
+    <img class="lb-img" id="lb-img" alt="">
+    <button class="lb-btn lb-next" type="button" data-i18n-attr="aria-label:gallery.next">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+    </button>
+  </div>
+
+  <script src="data/songs.js"></script>
+  <script src="data/content.js"></script>
+  <script src="data/i18n/fi.js"></script>
+  <script src="data/i18n/en.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

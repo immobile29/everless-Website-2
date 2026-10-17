@@ -31,7 +31,7 @@ Logo on tekstipohjainen (sana "Everless" teeman fontilla ja tähti-ikoni), joten
 `data/site.config.js`: `theme: "western"` tai `theme: "modern"`.
 
 ### Sivut
-Sivusto on kolmisivuinen: `index.html` (etusivu: palvelut, genret ja lomake), `ehdot.html` (varausehdot), `galleria.html` (kokoonpano, DJ:t, kuvat, videot) ja `repertuaari.html` (biisit). Yläpalkki ja alatunniste tulevat tiedostosta `js/layout.js`. Kalenteria ei ole: lomakkeen päivävalitsin estää menneet päivät ja alle `booking.minLeadMonths` kuukauden päässä olevat päivät.
+Sivusto on kolmisivuinen: `index.html` (etusivu: palvelut, genret ja lomake), `ehdot.html` (varausehdot), `galleria.html` (bändi ja DJ:t), `keikat.html` (aikaisemmat keikat: videot ja kuvat) ja `repertuaari.html` (biisit). Yläpalkki ja alatunniste tulevat tiedostosta `js/layout.js`. Kalenteria ei ole: lomakkeen päivävalitsin estää menneet päivät ja alle `booking.minLeadMonths` kuukauden päässä olevat päivät.
 
 ### Videot
 1. Vie videot YouTubeen (esim. listaamattomana).

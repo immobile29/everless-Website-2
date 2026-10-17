@@ -2,10 +2,10 @@
 window.EVERLESS_I18N = window.EVERLESS_I18N || {};
 window.EVERLESS_I18N.en = {
   "meta.title.home": "Everless – Cover band & DJs for weddings, Christmas parties and events",
-  "meta.title.gallery": "The band, gallery and videos – Everless",
+  "meta.title.gallery": "The band – Everless",
   "meta.title.repertoire": "Repertoire – Everless",
   "meta.description.home": "Everless is a seven-piece cover band (rock, pop and country) and DJ service for weddings, Christmas parties, birthdays, anniversaries and other events. Request a quote.",
-  "meta.description.gallery": "Meet the members and DJs of Everless, and see photos and videos from our gigs.",
+  "meta.description.gallery": "Meet the members and DJs of Everless.",
   "meta.description.repertoire": "The Everless repertoire: pop, rock and country songs with search and 30-second previews.",
 
   "a11y.skip": "Skip to content",
@@ -13,11 +13,17 @@ window.EVERLESS_I18N.en = {
   "a11y.close": "Close",
   "a11y.lang": "Language",
 
-  "nav.gallery": "The band & gallery",
+  "nav.gallery": "The band",
   "nav.repertoire": "Repertoire",
   "nav.terms": "Terms",
   "meta.title.terms": "Booking terms – Everless",
   "meta.description.terms": "Everless booking terms: cancellation, requested songs and confirmation of agreement.",
+  "nav.gigs": "Past gigs",
+  "meta.title.gigs": "Past gigs – Everless",
+  "meta.description.gigs": "Past gigs: videos and photos from Everless performances.",
+  "page.gigs.eyebrow": "References",
+  "page.gigs.title": "Past gigs",
+  "page.gigs.lead": "Videos and photos from our gigs.",
   "nav.home": "Home",
   "nav.book": "Request a quote",
 
@@ -156,9 +162,9 @@ window.EVERLESS_I18N.en = {
   "footer.pages": "Pages",
   "footer.terms": "Terms",
   "footer.photos": "Photos: Saara Oksanen, Myrthe & Daniel Schmidt",
-  "page.gallery.eyebrow": "The band & gallery",
+  "page.gallery.eyebrow": "The band",
   "page.gallery.title": "Get to know Everless",
-  "page.gallery.lead": "Members, DJs, photos and videos.",
+  "page.gallery.lead": "Members and DJs.",
   "terms.eyebrow": "Terms",
   "terms.title": "Booking terms",
   "terms.lead": "How we agree on gigs. These terms apply to all bookings.",

@@ -2,10 +2,10 @@
 window.EVERLESS_I18N = window.EVERLESS_I18N || {};
 window.EVERLESS_I18N.fi = {
   "meta.title.home": "Everless – Cover-bändi ja DJ häihin, pikkujouluihin ja juhliin",
-  "meta.title.gallery": "Bändi, galleria ja videot – Everless",
+  "meta.title.gallery": "Bändi – Everless",
   "meta.title.repertoire": "Repertuaari – Everless",
   "meta.description.home": "Everless on seitsemänhenkinen cover-bändi (rock, pop ja country) sekä DJ-palvelu häihin, pikkujouluihin, syntymäpäiviin, vuosijuhliin ja muihin tapahtumiin. Pyydä tarjous.",
-  "meta.description.gallery": "Tutustu Everlessin jäseniin ja DJ:hin, katso kuvia ja videoita bändin keikoilta.",
+  "meta.description.gallery": "Tutustu Everlessin jäseniin ja DJ:hin.",
   "meta.description.repertoire": "Everlessin repertuaari: pop-, rock- ja country-biisit hakuineen ja 30 sekunnin esikuunteluineen.",
 
   "a11y.skip": "Siirry sisältöön",
@@ -13,11 +13,17 @@ window.EVERLESS_I18N.fi = {
   "a11y.close": "Sulje",
   "a11y.lang": "Kieli",
 
-  "nav.gallery": "Bändi & galleria",
+  "nav.gallery": "Bändi",
   "nav.repertoire": "Repertuaari",
   "nav.terms": "Ehdot",
   "meta.title.terms": "Varausehdot – Everless",
   "meta.description.terms": "Everlessin varausehdot: peruutusehdot, toivekappaleet ja sopimuksen vahvistaminen.",
+  "nav.gigs": "Aikaisemmat keikat",
+  "meta.title.gigs": "Aikaisemmat keikat – Everless",
+  "meta.description.gigs": "Aikaisemmat keikat: videoita ja kuvia Everlessin esiintymisistä.",
+  "page.gigs.eyebrow": "Referenssit",
+  "page.gigs.title": "Aikaisemmat keikat",
+  "page.gigs.lead": "Videoita ja kuvia keikoiltamme.",
   "nav.home": "Etusivu",
   "nav.book": "Pyydä tarjous",
 
@@ -156,9 +162,9 @@ window.EVERLESS_I18N.fi = {
   "footer.pages": "Sivut",
   "footer.terms": "Ehdot",
   "footer.photos": "Kuvat: Saara Oksanen, Myrthe & Daniel Schmidt",
-  "page.gallery.eyebrow": "Bändi & galleria",
+  "page.gallery.eyebrow": "Bändi",
   "page.gallery.title": "Tutustu Everlessiin",
-  "page.gallery.lead": "Kokoonpano, DJ:t, kuvat ja videot.",
+  "page.gallery.lead": "Kokoonpano ja DJ:t.",
   "terms.eyebrow": "Ehdot",
   "terms.title": "Varausehdot",
   "terms.lead": "Näin sovimme keikoista. Ehdot koskevat kaikkia varauksia.",

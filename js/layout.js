@@ -19,6 +19,7 @@
       '<nav class="main-nav" id="main-nav" aria-label="Päävalikko">' +
       '<a href="index.html"' + cur("home") + ' data-i18n="nav.home">Etusivu</a>' +
       '<a href="galleria.html"' + cur("gallery") + ' data-i18n="nav.gallery">Bändi & galleria</a>' +
+      '<a href="keikat.html"' + cur("gigs") + ' data-i18n="nav.gigs">Aikaisemmat keikat</a>' +
       '<a href="repertuaari.html"' + cur("repertoire") + ' data-i18n="nav.repertoire">Repertuaari</a>' +
       '<a href="ehdot.html"' + cur("terms") + ' data-i18n="nav.terms">Ehdot</a>' +
       '<a class="btn btn-small nav-cta" href="index.html#book" data-i18n="nav.book">Pyydä tarjous</a>' +
@@ -51,6 +52,7 @@
       '<li><a href="index.html" data-i18n="nav.home"></a></li>' +
       '<li><a href="ehdot.html" data-i18n="footer.terms"></a></li>' +
       '<li><a href="galleria.html" data-i18n="nav.gallery"></a></li>' +
+      '<li><a href="keikat.html" data-i18n="nav.gigs"></a></li>' +
       '<li><a href="repertuaari.html" data-i18n="nav.repertoire"></a></li></ul></div>' +
       '<div class="footer-contact"><h3 data-i18n="footer.contact">Yhteystiedot</h3><ul>' +
       '<li><a href="mailto:' + cfg.contact.email + '">' + cfg.contact.email + "</a></li>" +
