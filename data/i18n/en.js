@@ -15,6 +15,9 @@ window.EVERLESS_I18N.en = {
 
   "nav.gallery": "The band & gallery",
   "nav.repertoire": "Repertoire",
+  "nav.terms": "Terms",
+  "meta.title.terms": "Booking terms – Everless",
+  "meta.description.terms": "Everless booking terms: cancellation, requested songs and confirmation of agreement.",
   "nav.home": "Home",
   "nav.book": "Request a quote",
 
@@ -89,7 +92,7 @@ window.EVERLESS_I18N.en = {
 
   "rep.eyebrow": "Repertoire",
   "rep.title": "Our songs",
-  "rep.lead": "Press the play button for a 30-second preview of the original track. For requested songs, see the <a href=\"index.html#terms\">terms</a>.",
+  "rep.lead": "Press the play button for a 30-second preview of the original track. For requested songs, see the <a href=\"ehdot.html\">terms</a>.",
   "rep.all": "All",
   "rep.search": "Search artist or song",
   "rep.searchLabel": "Search songs",
@@ -132,7 +135,7 @@ window.EVERLESS_I18N.en = {
   "form.guests": "Estimated number of guests",
   "form.message": "Tell us about your event",
   "form.messagePlaceholder": "E.g. schedule, song requests, mood and any other wishes",
-  "form.consent": "I accept the <a href=\"#terms\">terms</a> and agree that my contact details are used only to reply to this enquiry.",
+  "form.consent": "I accept the <a href=\"ehdot.html\">terms</a> and agree that my contact details are used only to reply to this enquiry.",
   "form.submit": "Send contact request",
   "form.sending": "Sending…",
   "form.select": "Select…",

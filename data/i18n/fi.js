@@ -15,6 +15,9 @@ window.EVERLESS_I18N.fi = {
 
   "nav.gallery": "Bändi & galleria",
   "nav.repertoire": "Repertuaari",
+  "nav.terms": "Ehdot",
+  "meta.title.terms": "Varausehdot – Everless",
+  "meta.description.terms": "Everlessin varausehdot: peruutusehdot, toivekappaleet ja sopimuksen vahvistaminen.",
   "nav.home": "Etusivu",
   "nav.book": "Pyydä tarjous",
 
@@ -89,7 +92,7 @@ window.EVERLESS_I18N.fi = {
 
   "rep.eyebrow": "Repertuaari",
   "rep.title": "Kappaleemme",
-  "rep.lead": "Paina toistopainiketta kuunnellaksesi 30 sekunnin esimaistiaisen alkuperäisestä kappaleesta. Toivekappaleista lisää <a href=\"index.html#terms\">ehdoissa</a>.",
+  "rep.lead": "Paina toistopainiketta kuunnellaksesi 30 sekunnin esimaistiaisen alkuperäisestä kappaleesta. Toivekappaleista lisää <a href=\"ehdot.html\">ehdoissa</a>.",
   "rep.all": "Kaikki",
   "rep.search": "Hae artistia tai biisiä",
   "rep.searchLabel": "Hae biisejä",
@@ -132,7 +135,7 @@ window.EVERLESS_I18N.fi = {
   "form.guests": "Arvioitu vieraiden määrä",
   "form.message": "Kerro tapahtumastanne",
   "form.messagePlaceholder": "Esim. aikataulu, toivebiisit, tunnelma ja muut toiveet",
-  "form.consent": "Hyväksyn <a href=\"#terms\">ehdot</a> ja sen, että yhteystietojani käytetään vain tähän tarjouspyyntöön vastaamiseen.",
+  "form.consent": "Hyväksyn <a href=\"ehdot.html\">ehdot</a> ja sen, että yhteystietojani käytetään vain tähän tarjouspyyntöön vastaamiseen.",
   "form.submit": "Lähetä yhteydenottopyyntö",
   "form.sending": "Lähetetään…",
   "form.select": "Valitse…",

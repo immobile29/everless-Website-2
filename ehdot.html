@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varausehdot – Everless</title>
+  <meta name="description" content="Everlessin varausehdot: peruutusehdot, toivekappaleet ja sopimuksen vahvistaminen.">
+  <meta name="theme-color" content="#16100c">
+  <meta property="og:title" content="Everless – Cover band & DJs">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/band/band.webp">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Rye&family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/base.css">
+
+  <script src="data/site.config.js"></script>
+  <script src="js/gate.js"></script>
+  <script>
+    (function () {
+      var t = (new URLSearchParams(location.search).get("theme")) || window.EVERLESS_CONFIG.theme;
+      document.documentElement.setAttribute("data-theme", t === "modern" ? "modern" : "western");
+    })();
+  </script>
+</head>
+<body data-page="terms">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Siirry sisältöön</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="terms.eyebrow">Ehdot</p>
+        <h1 data-i18n="terms.title"></h1>
+        <p class="lead" data-i18n="terms.lead"></p>
+      </div>
+    </section>
+
+    <section class="section" id="terms">
+      <div class="container">
+        <div class="terms-grid">
+          <article class="card terms-card">
+            <h3 data-i18n="terms.cancel.title"></h3>
+            <p data-i18n="terms.cancel.text"></p>
+          </article>
+          <article class="card terms-card">
+            <h3 data-i18n="terms.songs.title"></h3>
+            <p data-i18n="terms.songs.text"></p>
+          </article>
+          <article class="card terms-card">
+            <h3 data-i18n="terms.confirm.title"></h3>
+            <p data-i18n="terms.confirm.text"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="container">
+        <a class="btn" href="index.html#book" data-i18n="hero.cta">Pyydä tarjous</a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="data/songs.js"></script>
+  <script src="data/content.js"></script>
+  <script src="data/i18n/fi.js"></script>
+  <script src="data/i18n/en.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -20,6 +20,7 @@
       '<a href="index.html"' + cur("home") + ' data-i18n="nav.home">Etusivu</a>' +
       '<a href="galleria.html"' + cur("gallery") + ' data-i18n="nav.gallery">Bändi & galleria</a>' +
       '<a href="repertuaari.html"' + cur("repertoire") + ' data-i18n="nav.repertoire">Repertuaari</a>' +
+      '<a href="ehdot.html"' + cur("terms") + ' data-i18n="nav.terms">Ehdot</a>' +
       '<a class="btn btn-small nav-cta" href="index.html#book" data-i18n="nav.book">Pyydä tarjous</a>' +
       "</nav>" +
       '<div class="header-tools">' +
@@ -48,7 +49,7 @@
       "<div>" + LOGO + '<p class="footer-tagline" data-i18n="footer.tagline"></p></div>' +
       '<div class="footer-links"><h3 data-i18n="footer.pages">Sivut</h3><ul>' +
       '<li><a href="index.html" data-i18n="nav.home"></a></li>' +
-      '<li><a href="index.html#terms" data-i18n="footer.terms"></a></li>' +
+      '<li><a href="ehdot.html" data-i18n="footer.terms"></a></li>' +
       '<li><a href="galleria.html" data-i18n="nav.gallery"></a></li>' +
       '<li><a href="repertuaari.html" data-i18n="nav.repertoire"></a></li></ul></div>' +
       '<div class="footer-contact"><h3 data-i18n="footer.contact">Yhteystiedot</h3><ul>' +
