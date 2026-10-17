@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Everless – Cover-bändi ja DJ häihin, pikkujouluihin ja juhliin</title>
-  <meta name="description" content="Everless on seitsemänhenkinen cover-bändi (rock, pop ja country) sekä DJ-palvelu häihin, pikkujouluihin ja muihin juhliin.">
+  <meta name="description" content="Everless on seitsemänhenkinen cover-bändi (rock, pop ja country) sekä DJ-palvelu häihin, pikkujouluihin, syntymäpäiviin ja muihin juhliin.">
   <meta name="theme-color" content="#16100c">
   <meta property="og:title" content="Everless – Cover band & DJs">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/band/band.webp">
+  <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,47 +18,18 @@
   <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/base.css">
 
-  <meta name="robots" content="noindex, nofollow">
   <script src="data/site.config.js"></script>
   <script src="js/gate.js"></script>
   <script>
-    // Aseta teema ennen ensimmäistä piirtoa (vilkkumisen esto). ?theme=modern esikatselee toista teemaa.
     (function () {
       var t = (new URLSearchParams(location.search).get("theme")) || window.EVERLESS_CONFIG.theme;
       document.documentElement.setAttribute("data-theme", t === "modern" ? "modern" : "western");
     })();
   </script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Siirry sisältöön</a>
-
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="Everless">
-        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.4 9.1.8-6.9 6 2.1 8.9L16 21.4 8.1 26.1l2.1-8.9-6.9-6 9.1-.8z" fill="currentColor"/></svg>
-        <span class="logo-word">Everless</span>
-      </a>
-
-      <nav class="main-nav" id="main-nav" aria-label="Päävalikko">
-        <a href="#services" data-i18n="nav.services">Palvelut</a>
-        <a href="#members" data-i18n="nav.members">Kokoonpano</a>
-        <a href="#gallery" data-i18n="nav.gallery">Galleria</a>
-        <a href="#videos" data-i18n="nav.videos">Videot</a>
-        <a href="#repertoire" data-i18n="nav.repertoire">Repertuaari</a>
-        <a class="btn btn-small nav-cta" href="#book" data-i18n="nav.book">Pyydä tarjous</a>
-      </nav>
-
-      <div class="header-tools">
-        <div class="lang-switch" role="group" aria-label="Kieli">
-          <button type="button" data-lang="fi" aria-pressed="true">FI</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        </div>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-attr="aria-label:a11y.menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+  <header id="site-header"></header>
 
   <main id="main">
     <!-- HERO -->
@@ -69,7 +41,7 @@
           <p class="hero-lead" data-i18n="hero.lead"></p>
           <div class="hero-actions">
             <a class="btn" href="#book" data-i18n="hero.cta">Pyydä tarjous</a>
-            <a class="btn btn-ghost" href="#repertoire" data-i18n="hero.cta2">Tutustu repertuaariin</a>
+            <a class="btn btn-ghost" href="repertuaari.html" data-i18n="hero.cta2">Tutustu repertuaariin</a>
           </div>
         </div>
         <figure class="hero-photo">
@@ -109,9 +81,12 @@
           <div class="events">
             <span class="events-label" data-i18n="services.events">Esiinnymme mm.</span>
             <ul class="chips">
-              <li data-i18n="services.event.wedding">Häät</li>
-              <li data-i18n="services.event.xmas">Pikkujoulut</li>
-              <li data-i18n="services.event.party">Muut juhlat</li>
+            <li data-i18n="services.event.wedding">Häät</li>
+            <li data-i18n="services.event.xmas">Pikkujoulut</li>
+            <li data-i18n="services.event.birthday">Syntymäpäiväjuhlat</li>
+            <li data-i18n="services.event.anniversary">Vuosijuhlat</li>
+            <li data-i18n="services.event.corporate">Yritystapahtumat</li>
+            <li data-i18n="services.event.party">Muut juhlat</li>
             </ul>
           </div>
           <div class="price-note">
@@ -133,84 +108,33 @@
       </div>
     </section>
 
-    <!-- KOKOONPANO -->
-    <section class="section" id="members">
+    <!-- EHDOT -->
+    <section class="section" id="terms">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow" data-i18n="members.eyebrow">Kokoonpano</p>
-          <h2 data-i18n="members.title"></h2>
-          <p class="lead" data-i18n="members.lead"></p>
+          <p class="eyebrow" data-i18n="terms.eyebrow">Ehdot</p>
+          <h2 data-i18n="terms.title"></h2>
+          <p class="lead" data-i18n="terms.lead"></p>
         </header>
-
-        <figure class="wide-photo">
-          <img src="assets/img/band/boys.webp" width="1800" height="1200" loading="lazy" alt="" data-i18n-attr="alt:members.photo.alt">
-        </figure>
-
-        <h3 class="subhead" data-i18n="members.band">Bändi</h3>
-        <div class="member-grid" id="member-grid"></div>
-
-        <h3 class="subhead" data-i18n="members.djs">DJ:t</h3>
-        <div class="dj-block">
-          <figure class="dj-photo">
-            <img src="assets/img/band/djs.webp" width="1800" height="1200" loading="lazy" alt="" data-i18n-attr="alt:members.djs.alt">
-          </figure>
-          <div class="dj-info">
-            <p data-i18n="members.djs.text"></p>
-            <div class="member-grid member-grid-small" id="dj-grid"></div>
-          </div>
+        <div class="terms-grid">
+          <article class="card terms-card">
+            <h3 data-i18n="terms.cancel.title"></h3>
+            <p data-i18n="terms.cancel.text"></p>
+          </article>
+          <article class="card terms-card">
+            <h3 data-i18n="terms.songs.title"></h3>
+            <p data-i18n="terms.songs.text"></p>
+          </article>
+          <article class="card terms-card">
+            <h3 data-i18n="terms.confirm.title"></h3>
+            <p data-i18n="terms.confirm.text"></p>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <!-- GALLERIA -->
-    <section class="section section-alt" id="gallery">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="gallery.eyebrow">Galleria</p>
-          <h2 data-i18n="gallery.title"></h2>
-          <p class="lead" data-i18n="gallery.lead"></p>
-        </header>
-        <div class="gallery" id="gallery-grid"></div>
-      </div>
-    </section>
-
-    <!-- VIDEOT -->
-    <section class="section" id="videos">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="videos.eyebrow">Videot</p>
-          <h2 data-i18n="videos.title"></h2>
-          <p class="lead" data-i18n="videos.lead"></p>
-        </header>
-        <div class="card-grid cols-2" id="video-grid"></div>
-      </div>
-    </section>
-
-    <!-- REPERTUAARI -->
-    <section class="section section-alt" id="repertoire">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="rep.eyebrow">Repertuaari</p>
-          <h2 data-i18n="rep.title"></h2>
-          <p class="lead" data-i18n="rep.lead"></p>
-        </header>
-
-        <div class="rep-controls">
-          <div class="tabs" role="tablist" id="rep-tabs"></div>
-          <label class="search">
-            <span class="sr-only" data-i18n="rep.searchLabel">Hae biisejä</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
-            <input type="search" id="rep-search" autocomplete="off" data-i18n-attr="placeholder:rep.search">
-          </label>
-        </div>
-        <p class="rep-count" id="rep-count" aria-live="polite"></p>
-        <ul class="song-list" id="song-list"></ul>
-        <p class="fineprint" data-i18n="rep.credit"></p>
       </div>
     </section>
 
     <!-- VARAUS -->
-    <section class="section" id="book">
+    <section class="section section-alt" id="book">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow" data-i18n="book.eyebrow">Varaa meidät</p>
@@ -219,163 +143,107 @@
           <p class="notice"><strong data-i18n="book.nonbinding">Pyyntö ei ole sitova.</strong> <span id="book-rule"></span></p>
         </header>
 
-        <div class="booking">
-          <div class="calendar card" id="calendar" aria-label="Kalenteri">
-            <div class="cal-head">
-              <button type="button" class="cal-nav" id="cal-prev" data-i18n-attr="aria-label:cal.prev">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
-              </button>
-              <h3 class="cal-title" id="cal-title" aria-live="polite"></h3>
-              <button type="button" class="cal-nav" id="cal-next" data-i18n-attr="aria-label:cal.next">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
-              </button>
+        <form class="card booking-form" id="booking-form" novalidate>
+          <h3 data-i18n="form.title">Yhteydenottopyyntö</h3>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name" data-i18n="form.name">Nimi</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <p class="error" data-error-for="name"></p>
             </div>
-            <div class="cal-grid" id="cal-weekdays" aria-hidden="true"></div>
-            <div class="cal-grid" id="cal-days"></div>
-            <ul class="legend">
-              <li><i class="dot dot-free"></i><span data-i18n="cal.legend.free">Vapaa</span></li>
-              <li><i class="dot dot-booked"></i><span data-i18n="cal.legend.booked">Varattu</span></li>
-              <li><i class="dot dot-soon"></i><span data-i18n="cal.legend.soon">Liian lähellä</span></li>
-              <li><i class="dot dot-selected"></i><span data-i18n="cal.legend.selected">Valittu</span></li>
-            </ul>
+            <div class="field">
+              <label for="f-email" data-i18n="form.email">Sähköposti</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+              <p class="error" data-error-for="email"></p>
+            </div>
           </div>
 
-          <form class="card booking-form" id="booking-form" novalidate>
-            <h3 data-i18n="form.title">Yhteydenottopyyntö</h3>
-
+          <div class="field-row">
+            <div class="field">
+              <label for="f-phone"><span data-i18n="form.phone">Puhelin</span> <small data-i18n="form.optional">(valinnainen)</small></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
             <div class="field">
               <label for="f-date" data-i18n="form.date">Tapahtuman päivä</label>
-              <input id="f-date" name="date_display" type="text" readonly data-i18n-attr="placeholder:form.datePlaceholder" required>
-              <input type="hidden" name="date" id="f-date-iso">
-              <p class="hint" id="date-hint" data-i18n="cal.hint"></p>
+              <input id="f-date" name="date" type="date" required>
+              <p class="hint" id="date-hint"></p>
               <p class="error" data-error-for="date"></p>
             </div>
+          </div>
 
-            <div class="field-row">
-              <div class="field">
-                <label for="f-name" data-i18n="form.name">Nimi</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required>
-                <p class="error" data-error-for="name"></p>
-              </div>
-              <div class="field">
-                <label for="f-email" data-i18n="form.email">Sähköposti</label>
-                <input id="f-email" name="email" type="email" autocomplete="email" required>
-                <p class="error" data-error-for="email"></p>
-              </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-type" data-i18n="form.eventType">Tapahtuman tyyppi</label>
+              <select id="f-type" name="event_type" required>
+                <option value="" data-i18n="form.select">Valitse…</option>
+                <option value="wedding" data-i18n="form.eventType.wedding">Häät</option>
+                <option value="xmas" data-i18n="form.eventType.xmas">Pikkujoulut</option>
+                <option value="birthday" data-i18n="form.eventType.birthday">Syntymäpäiväjuhla</option>
+                <option value="anniversary" data-i18n="form.eventType.anniversary">Vuosijuhla</option>
+                <option value="corporate" data-i18n="form.eventType.corporate">Yritystapahtuma</option>
+                <option value="other" data-i18n="form.eventType.other">Muu tapahtuma</option>
+              </select>
+              <p class="error" data-error-for="event_type"></p>
             </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="f-phone"><span data-i18n="form.phone">Puhelin</span> <small data-i18n="form.optional">(valinnainen)</small></label>
-                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-              </div>
-              <div class="field">
-                <label for="f-type" data-i18n="form.eventType">Tapahtuman tyyppi</label>
-                <select id="f-type" name="event_type" required>
-                  <option value="" data-i18n="form.select">Valitse…</option>
-                  <option value="wedding" data-i18n="form.eventType.wedding">Häät</option>
-                  <option value="xmas" data-i18n="form.eventType.xmas">Pikkujoulut</option>
-                  <option value="party" data-i18n="form.eventType.party">Muu juhla</option>
-                  <option value="other" data-i18n="form.eventType.other">Muu tapahtuma</option>
-                </select>
-                <p class="error" data-error-for="event_type"></p>
-              </div>
+            <div class="field">
+              <label for="f-service" data-i18n="form.service">Mitä haluatte?</label>
+              <select id="f-service" name="service" required>
+                <option value="" data-i18n="form.select">Valitse…</option>
+                <option value="band" data-i18n="form.service.band">Bändi</option>
+                <option value="dj" data-i18n="form.service.dj">DJ</option>
+                <option value="both" data-i18n="form.service.both">Bändi ja DJ</option>
+                <option value="unsure" data-i18n="form.service.unsure">En ole vielä varma</option>
+              </select>
+              <p class="error" data-error-for="service"></p>
             </div>
+          </div>
 
-            <div class="field-row">
-              <div class="field">
-                <label for="f-location" data-i18n="form.location">Paikkakunta / paikka</label>
-                <input id="f-location" name="location" type="text" required>
-                <p class="error" data-error-for="location"></p>
-              </div>
-              <div class="field">
-                <label for="f-service" data-i18n="form.service">Mitä haluatte?</label>
-                <select id="f-service" name="service" required>
-                  <option value="" data-i18n="form.select">Valitse…</option>
-                  <option value="band" data-i18n="form.service.band">Bändi</option>
-                  <option value="dj" data-i18n="form.service.dj">DJ</option>
-                  <option value="both" data-i18n="form.service.both">Bändi ja DJ</option>
-                  <option value="unsure" data-i18n="form.service.unsure">En ole vielä varma</option>
-                </select>
-                <p class="error" data-error-for="service"></p>
-              </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-location" data-i18n="form.location">Paikkakunta / paikka</label>
+              <input id="f-location" name="location" type="text" required>
+              <p class="error" data-error-for="location"></p>
             </div>
-
             <div class="field">
               <label for="f-guests"><span data-i18n="form.guests">Arvioitu vieraiden määrä</span> <small data-i18n="form.optional">(valinnainen)</small></label>
               <input id="f-guests" name="guests" type="number" min="1" inputmode="numeric">
             </div>
+          </div>
 
-            <div class="field">
-              <label for="f-message"><span data-i18n="form.message">Kerro tapahtumastanne</span> <small data-i18n="form.optional">(valinnainen)</small></label>
-              <textarea id="f-message" name="message" rows="4" data-i18n-attr="placeholder:form.messagePlaceholder"></textarea>
-            </div>
+          <div class="field">
+            <label for="f-message"><span data-i18n="form.message">Kerro tapahtumastanne</span> <small data-i18n="form.optional">(valinnainen)</small></label>
+            <textarea id="f-message" name="message" rows="4" data-i18n-attr="placeholder:form.messagePlaceholder"></textarea>
+          </div>
 
-            <!-- Roskapostisuoja: oikeat käyttäjät eivät näe tätä kenttää -->
-            <div class="hp" aria-hidden="true">
-              <label>Jätä tyhjäksi <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
-            </div>
+          <!-- Roskapostisuoja: oikeat käyttäjät eivät näe tätä kenttää -->
+          <div class="hp" aria-hidden="true">
+            <label>Jätä tyhjäksi <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
 
-            <div class="field consent">
-              <label class="check">
-                <input type="checkbox" id="f-consent" name="consent" required>
-                <span data-i18n="form.consent"></span>
-              </label>
-              <p class="error" data-error-for="consent"></p>
-            </div>
+          <div class="field consent">
+            <label class="check">
+              <input type="checkbox" id="f-consent" name="consent" required>
+              <span data-i18n-html="form.consent"></span>
+            </label>
+            <p class="error" data-error-for="consent"></p>
+          </div>
 
-            <button class="btn btn-block" type="submit" id="form-submit" data-i18n="form.submit">Lähetä yhteydenottopyyntö</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+          <button class="btn btn-block" type="submit" id="form-submit" data-i18n="form.submit">Lähetä yhteydenottopyyntö</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <a class="logo" href="#top" aria-label="Everless">
-          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l3.6 8.4 9.1.8-6.9 6 2.1 8.9L16 21.4 8.1 26.1l2.1-8.9-6.9-6 9.1-.8z" fill="currentColor"/></svg>
-          <span class="logo-word">Everless</span>
-        </a>
-        <p class="footer-tagline" data-i18n="footer.tagline"></p>
-      </div>
-      <div class="footer-contact">
-        <h3 data-i18n="footer.contact">Yhteystiedot</h3>
-        <ul>
-          <li><a id="footer-email" href="#"></a></li>
-          <li><a id="footer-instagram" href="#" target="_blank" rel="noopener"></a></li>
-          <li data-i18n="footer.area"></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <small>© <span id="year"></span> Everless. <span data-i18n="footer.rights"></span></small>
-    </div>
-  </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
-    <button class="lb-btn lb-close" type="button" data-i18n-attr="aria-label:a11y.close">&times;</button>
-    <button class="lb-btn lb-prev" type="button" data-i18n-attr="aria-label:gallery.prev">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
-    </button>
-    <img class="lb-img" id="lb-img" alt="">
-    <button class="lb-btn lb-next" type="button" data-i18n-attr="aria-label:gallery.next">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
-    </button>
-  </div>
+  <footer id="site-footer"></footer>
 
   <script src="data/songs.js"></script>
   <script src="data/content.js"></script>
-  <script src="data/previews.js"></script>
   <script src="data/i18n/fi.js"></script>
   <script src="data/i18n/en.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/gallery.js"></script>
-  <script src="js/repertoire.js"></script>
-  <script src="js/calendar.js"></script>
+  <script src="js/layout.js"></script>
   <script src="js/booking.js"></script>
   <script src="js/main.js"></script>
 </body>

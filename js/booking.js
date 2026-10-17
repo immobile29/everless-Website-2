@@ -1,28 +1,46 @@
-/* Yhteydenottolomake: validointi ja lähetys (Formspree tai mailto-varavaihtoehto) */
+/* Yhteydenottolomake: validointi ja lähetys suoraan Everlessin sähköpostiin (FormSubmit.co).
+   Päivävalitsimessa ei voi valita menneitä päiviä eikä liian lähellä olevia (booking.minLeadMonths). */
 (function () {
   var E = window.Everless;
   var cfg = window.EVERLESS_CONFIG;
   var form = document.getElementById("booking-form");
+  if (!form) return;
   var dateInput = document.getElementById("f-date");
-  var dateIso = document.getElementById("f-date-iso");
+  var dateHint = document.getElementById("date-hint");
   var status = document.getElementById("form-status");
   var submit = document.getElementById("form-submit");
+
+  /* ---------- Päivämäärän alaraja ---------- */
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function iso(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function minDate() {
+    var d = new Date();
+    d.setHours(12, 0, 0, 0);
+    var day = d.getDate();
+    d.setMonth(d.getMonth() + (cfg.booking.minLeadMonths || 0));
+    if (d.getDate() !== day) d.setDate(0); // esim. 31.1. + 1 kk -> kuun viimeinen päivä
+    return d;
+  }
+  function readable(isoStr) {
+    var p = isoStr.split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString(E.getLang() === "en" ? "en-GB" : "fi-FI", {
+      day: "numeric", month: "long", year: "numeric",
+    });
+  }
+  function applyMin() {
+    var m = minDate();
+    dateInput.min = iso(m);
+    dateHint.textContent = E.t("form.dateHint", { min: readable(iso(m)) });
+  }
+  function dateOk() {
+    return /^\d{4}-\d{2}-\d{2}$/.test(dateInput.value) && dateInput.value >= dateInput.min;
+  }
 
   /* Sääntöteksti, jossa sähköposti on linkki */
   function renderRule() {
     var a = '<a href="mailto:' + cfg.contact.email + '">' + cfg.contact.email + "</a>";
     document.getElementById("book-rule").innerHTML = E.t("book.rule", { email: a });
   }
-
-  document.addEventListener("everless:date", function (e) {
-    dateIso.value = e.detail.iso || "";
-    dateInput.value = e.detail.label || "";
-    if (e.detail.iso) setError("date", "");
-  });
-  // Klikkaus päiväkenttään vie kalenteriin
-  dateInput.addEventListener("click", function () {
-    document.getElementById("calendar").scrollIntoView({ behavior: "smooth", block: "center" });
-  });
 
   function setError(name, msg) {
     var p = form.querySelector('[data-error-for="' + name + '"]');
@@ -36,7 +54,7 @@
     function bad(name, msg, el) { setError(name, msg); ok = false; if (!firstBad) firstBad = el; }
     ["date", "name", "email", "event_type", "location", "service", "consent"].forEach(function (n) { setError(n, ""); });
 
-    if (!dateIso.value || !E.calendar.isSelectable(dateIso.value)) bad("date", E.t("form.err.date"), dateInput);
+    if (!dateOk()) bad("date", E.t("form.err.date"), dateInput);
     ["name", "event_type", "location", "service"].forEach(function (n) {
       var el = form.elements[n];
       if (!el.value.trim()) bad(n, E.t("form.err.required"), el);
@@ -56,30 +74,29 @@
 
   function payload() {
     return {
-      date: dateIso.value,
-      date_readable: dateInput.value,
+      date: readable(dateInput.value) + " (" + dateInput.value + ")",
       name: form.elements.name.value.trim(),
       email: form.elements.email.value.trim(),
-      phone: form.elements.phone.value.trim(),
+      phone: form.elements.phone.value.trim() || "-",
       event_type: label("event_type"),
       location: form.elements.location.value.trim(),
       service: label("service"),
-      guests: form.elements.guests.value,
-      message: form.elements.message.value.trim(),
+      guests: form.elements.guests.value || "-",
+      message: form.elements.message.value.trim() || "-",
       language: E.getLang(),
     };
   }
 
   function mailtoLink(p) {
     var lines = [
-      E.t("form.date") + ": " + p.date_readable + " (" + p.date + ")",
+      E.t("form.date") + ": " + p.date,
       E.t("form.name") + ": " + p.name,
       E.t("form.email") + ": " + p.email,
-      E.t("form.phone") + ": " + (p.phone || "-"),
+      E.t("form.phone") + ": " + p.phone,
       E.t("form.eventType") + ": " + p.event_type,
       E.t("form.location") + ": " + p.location,
       E.t("form.service") + ": " + p.service,
-      E.t("form.guests") + ": " + (p.guests || "-"),
+      E.t("form.guests") + ": " + p.guests,
       "",
       p.message,
     ];
@@ -94,9 +111,8 @@
     showStatus("ok", "<strong>" + E.t("form.ok.title") + "</strong>" + E.t("form.ok.text") +
       '<br><button type="button" class="btn btn-small" id="form-again">' + E.t("form.again") + "</button>");
     form.reset();
-    E.calendar.clear();
     document.getElementById("form-again").addEventListener("click", function () {
-      status.className = "form-status"; status.innerHTML = ""; dateInput.focus();
+      status.className = "form-status"; status.innerHTML = ""; form.elements.name.focus();
     });
     status.scrollIntoView({ behavior: "smooth", block: "center" });
   }
@@ -109,9 +125,8 @@
     var p = payload();
     var endpoint = (cfg.booking.formEndpoint || "").trim();
 
-    if (!endpoint) {
+    if (!endpoint) { // varavaihtoehto: avaa sähköpostiohjelman
       window.location.href = mailtoLink(p);
-      showStatus("ok", E.t("form.mailto"));
       return;
     }
 
@@ -119,24 +134,34 @@
     var original = submit.textContent;
     submit.textContent = E.t("form.sending");
     p._subject = E.t("form.mail.subject", { date: p.date });
+    p._template = "table";
+    p._captcha = "false";
     p._replyto = p.email;
+    p._honey = "";
     fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(p),
     })
-      .then(function (r) { if (!r.ok) throw new Error("http " + r.status); success(); })
+      .then(function (r) {
+        if (!r.ok) throw new Error("http " + r.status);
+        return r.json();
+      })
+      .then(function (j) {
+        if (j && String(j.success) === "false") throw new Error(j.message || "failed");
+        success();
+      })
       .catch(function () { showStatus("err", E.t("form.fail")); })
       .finally(function () { submit.disabled = false; submit.textContent = original; });
   });
 
   // Virheet pois kun käyttäjä korjaa kenttää
   form.addEventListener("input", function (e) {
-    var n = e.target.name;
-    if (n) setError(n === "event_type" ? "event_type" : n, "");
+    if (e.target.name) setError(e.target.name, "");
   });
 
   E.onLang(function () {
+    applyMin();
     renderRule();
     if (status.classList.contains("err")) showStatus("err", E.t("form.fail"));
   });

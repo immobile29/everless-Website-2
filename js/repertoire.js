@@ -17,6 +17,7 @@
   var listEl = document.getElementById("song-list");
   var countEl = document.getElementById("rep-count");
   var searchEl = document.getElementById("rep-search");
+  if (!listEl || !tabsEl || !searchEl) return;
 
   var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
   var PAUSE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
@@ -285,6 +286,10 @@
     if (b) { state.genre = b.dataset.genre; renderTabs(); renderList(); }
   });
   searchEl.addEventListener("input", function () { state.query = searchEl.value; renderList(); });
+
+  // Esivalittu genre osoitteesta: repertuaari.html?genre=rock
+  var wanted = new URLSearchParams(location.search).get("genre");
+  if (GENRES.indexOf(wanted) > -1) state.genre = wanted;
 
   E.onLang(function () { renderTabs(); renderList(); });
 })();

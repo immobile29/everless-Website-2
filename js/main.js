@@ -27,6 +27,7 @@
   function renderMembers() {
     var g = document.getElementById("member-grid");
     var d = document.getElementById("dj-grid");
+    if (!g || !d) return;
     g.innerHTML = ""; d.innerHTML = "";
     window.EVERLESS_MEMBERS.forEach(function (m) { g.appendChild(memberCard(m)); });
     window.EVERLESS_DJS.forEach(function (m) { d.appendChild(memberCard(m)); });
@@ -35,6 +36,7 @@
   /* ---------- Genret ---------- */
   function renderGenres() {
     var wrap = document.getElementById("genre-cards");
+    if (!wrap) return;
     wrap.innerHTML = "";
     ["pop", "rock", "country"].forEach(function (g) {
       var n = (window.EVERLESS_SONGS[g] || []).length;
@@ -45,10 +47,7 @@
       var body = el("div", "genre-body");
       body.appendChild(el("p", null, E.t("genres." + g + ".text")));
       var a = el("a", null, E.t("genres.listen") + " →");
-      a.href = "#repertoire";
-      a.addEventListener("click", function () {
-        if (E.selectGenre) E.selectGenre(g);
-      });
+      a.href = "repertuaari.html?genre=" + g;
       body.appendChild(a);
       c.appendChild(top); c.appendChild(body);
       wrap.appendChild(c);
@@ -59,6 +58,7 @@
   var PLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
   function renderVideos() {
     var wrap = document.getElementById("video-grid");
+    if (!wrap) return;
     wrap.innerHTML = "";
     window.EVERLESS_VIDEOS.forEach(function (v) {
       var card = el("article", "card video-card");
@@ -91,29 +91,8 @@
     });
   }
 
-  /* ---------- Mobiilivalikko ---------- */
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("main-nav");
-  function closeNav() { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); }
-  toggle.addEventListener("click", function () {
-    var open = nav.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(open));
-  });
-  nav.addEventListener("click", function (e) { if (e.target.closest("a")) closeNav(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeNav(); });
-
-  /* ---------- Alatunniste ---------- */
-  function renderFooter() {
-    var m = document.getElementById("footer-email");
-    m.href = "mailto:" + cfg.contact.email; m.textContent = cfg.contact.email;
-    var ig = document.getElementById("footer-instagram");
-    ig.href = "https://instagram.com/" + cfg.contact.instagram; ig.textContent = "@" + cfg.contact.instagram;
-    document.getElementById("year").textContent = new Date().getFullYear();
-  }
-
   // Sivun kieliriippuvat osat piirretään aina kielen vaihtuessa
   E.onLang(function () { renderMembers(); renderGenres(); renderVideos(); });
 
-  renderFooter();
   E.applyLang();
 })();

@@ -5,6 +5,7 @@
   var grid = document.getElementById("gallery-grid");
   var box = document.getElementById("lightbox");
   var img = document.getElementById("lb-img");
+  if (!grid || !box) return;
   var current = 0;
   var lastFocus = null;
 

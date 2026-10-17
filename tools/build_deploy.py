@@ -9,7 +9,8 @@ OUT = ROOT / "deploy"
 if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir()
-shutil.copy2(ROOT / "index.html", OUT / "index.html")
+for page in ("index.html", "galleria.html", "repertuaari.html"):
+    shutil.copy2(ROOT / page, OUT / page)
 for d in ("css", "js", "data", "assets"):
     shutil.copytree(ROOT / d, OUT / d, ignore=shutil.ignore_patterns(".DS_Store"))
 (OUT / "_headers").write_text("/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n")

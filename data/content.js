@@ -15,8 +15,8 @@ window.EVERLESS_MEMBERS = [
   { name: "Totti",  roleKey: "role.guitarVocals", img: "assets/img/members/totti.webp" },
 ];
 window.EVERLESS_DJS = [
-  { name: "Jon", alias: "Aspec", roleKey: "role.dj", img: "assets/img/members/jon.webp" },
-  { name: "Alex",                 roleKey: "role.dj", img: "assets/img/members/alex.webp" },
+  { name: "Aspect", roleKey: "role.dj", img: "assets/img/members/jon.webp" },
+  { name: "Alwar", roleKey: "role.dj", img: "assets/img/members/alex.webp" },
 ];
 
 // Galleria. w/h = kuvan mitat (käytetään asettelun hyppimisen estämiseen).
@@ -48,11 +48,3 @@ window.EVERLESS_VIDEOS = [
   { title: "I Wanna Dance with Somebody", artist: "Whitney Houston", youtubeId: "ETzgYsCAyHc" },
   { title: "You're Gonna Go Far, Kid",    artist: "The Offspring",   youtubeId: "7olwNNpNZ38" },
 ];
-
-// Varatut päivät muodossa "VVVV-KK-PP". Lisää tai poista rivejä kun keikkoja varataan.
-window.EVERLESS_AVAILABILITY = {
-  booked: [
-    // "2026-12-05",
-    // "2026-12-12",
-  ],
-};

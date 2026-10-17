@@ -20,17 +20,18 @@ Avaa selaimessa http://localhost:8123 . Toisen teeman voi esikatsella lisäämä
 | Suomenkielisiä tekstejä | `data/i18n/fi.js` |
 | Englanninkielisiä tekstejä | `data/i18n/en.js` |
 | Repertuaaria (biisit) | `data/songs.js` |
-| Jäseniä, galleriaa, videoita, varattuja päiviä | `data/content.js` |
-| Logoa | `index.html` (`.logo`-lohko, teksti + tähti-ikoni) ja `assets/favicon.svg` |
+| Jäseniä, DJ:itä, galleriaa, videoita | `data/content.js` |
+| Ehtoja, kuvaajien nimiä, tapahtumatyyppejä | `data/i18n/fi.js` ja `en.js` (`terms.*`, `footer.photos`, `gallery.credit`, `services.event.*`) |
+| Logoa, yläpalkkia ja alatunnistetta | `js/layout.js` (jaettu kaikille sivuille) ja `assets/favicon.svg` |
 
 ### Logo
-Logo on tekstipohjainen (sana "Everless" teeman fontilla ja tähti-ikoni), joten se muuttuu teeman mukana. Voit vaihtaa sen omaan SVG-tiedostoon korvaamalla `.logo`-lohkon sisällön `<img src="assets/logo.svg" alt="Everless">`-elementillä.
+Logo on tekstipohjainen (sana "Everless" teeman fontilla ja tähti-ikoni), joten se muuttuu teeman mukana. Voit vaihtaa sen omaan SVG-tiedostoon korvaamalla `.logo`-lohkon (`js/layout.js`) sisällön `<img src="assets/logo.svg" alt="Everless">`-elementillä.
 
 ### Teeman vaihto
 `data/site.config.js`: `theme: "western"` tai `theme: "modern"`.
 
-### Varatut päivät
-Lisää päivät muodossa `"VVVV-KK-PP"` tiedoston `data/content.js` kohtaan `EVERLESS_AVAILABILITY.booked`. Ne näkyvät kalenterissa raidoitettuina ja niitä ei voi valita. Päivät, jotka ovat alle yhden kuukauden päässä tästä päivästä, ovat automaattisesti harmaina (`booking.minLeadMonths` asetuksissa).
+### Sivut
+Sivusto on kolmisivuinen: `index.html` (etusivu: palvelut, genret, ehdot ja lomake), `galleria.html` (kokoonpano, DJ:t, kuvat, videot) ja `repertuaari.html` (biisit). Yläpalkki ja alatunniste tulevat tiedostosta `js/layout.js`. Kalenteria ei ole: lomakkeen päivävalitsin estää menneet päivät ja alle `booking.minLeadMonths` kuukauden päässä olevat päivät.
 
 ### Videot
 1. Vie videot YouTubeen (esim. listaamattomana).
@@ -39,10 +40,7 @@ Lisää päivät muodossa `"VVVV-KK-PP"` tiedoston `data/content.js` kohtaan `EV
 Huom: alkuperäiset videot ovat kansiossa `Reference songs/` (n. 4 Gt) eikä niitä julkaista sivuston mukana (`.gitignore`). Tarkista, näkyykö videoilla yleisön kasvoja selvästi, ja sumenna ne tarvittaessa ennen julkaisua.
 
 ### Yhteydenottolomake
-Kunnes `booking.formEndpoint` on täytetty, lomake avaa vierailijan sähköpostiohjelman valmiiksi täytetyllä viestillä (mailto). Jotta pyynnöt tulevat suoraan sähköpostiisi ilman vierailijan sähköpostiohjelmaa:
-
-1. Luo ilmainen lomake osoitteessa https://formspree.io ja anna vastaanottajaksi `everlesstheband@gmail.com`.
-2. Kopioi lomakkeen osoite (esim. `https://formspree.io/f/abcdwxyz`) tiedostoon `data/site.config.js` kohtaan `booking.formEndpoint`.
+Lomake lähettää viestin suoraan osoitteeseen `everlesstheband@gmail.com` palvelun FormSubmit.co kautta (`booking.formEndpoint` tiedostossa `data/site.config.js`). Ensimmäisen lähetyksen jälkeen osoite saa aktivointiviestin, jonka linkkiä pitää klikata kerran. Tämän jälkeen jokainen pyyntö tulee sähköpostiin taulukkomuodossa. Jos kenttä on tyhjä, lomake avaa sähköpostiohjelman (mailto).
 
 ### Repertuaarin kuuntelupätkät
 Pätkät haetaan Applen iTunes Search API:sta (30 s) vasta kun vierailija painaa toistopainiketta, ja ne tallentuvat selaimen välimuistiin. Jos biisille ei löydy pätkää, toistopainike harmaantuu.

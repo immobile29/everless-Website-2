@@ -43,9 +43,10 @@
 
   function apply() {
     document.documentElement.lang = lang;
-    document.title = t("meta.title");
+    var page = document.body.dataset.page || "home";
+    document.title = t("meta.title." + page);
     var md = document.querySelector('meta[name="description"]');
-    if (md) md.setAttribute("content", t("meta.description"));
+    if (md) md.setAttribute("content", t("meta.description." + page));
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll("[data-i18n-html]").forEach(function (el) { el.innerHTML = t(el.dataset.i18nHtml); });

@@ -27,13 +27,10 @@ window.EVERLESS_CONFIG = {
   booking: {
     // Pyyntö on tehtävä vähintään näin monta kuukautta ennen tapahtumaa.
     minLeadMonths: 1,
-    // Kuinka monta kuukautta eteenpäin kalenterissa voi selata.
-    maxMonthsAhead: 24,
-
-    // Lomakkeen vastaanottaja. Luo ilmainen lomake osoitteessa https://formspree.io
-    // ja liitä tähän lomakkeen osoite, esim. "https://formspree.io/f/abcdwxyz".
-    // Kunnes tämä on täytetty, lomake avaa vierailijan sähköpostiohjelman valmiiksi täytettynä (mailto).
-    formEndpoint: "",
+    // Lomakkeen lähetys: FormSubmit.co lähettää viestin suoraan tähän osoitteeseen (ei tiliä).
+    // Ensimmäisen lähetyksen jälkeen everlesstheband@gmail.com saa aktivointiviestin,
+    // jonka linkkiä on painettava kerran. Tyhjä arvo = lomake avaa sähköpostiohjelman (mailto).
+    formEndpoint: "https://formsubmit.co/ajax/everlesstheband@gmail.com",
   },
 
   // Repertuaarin esikuuntelut haetaan Applen iTunes Search API:sta (30 s).
