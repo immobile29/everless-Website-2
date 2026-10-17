@@ -21,7 +21,7 @@ window.EVERLESS_DJS = [
 
 // Galleria. w/h = kuvan mitat (käytetään asettelun hyppimisen estämiseen).
 window.EVERLESS_GALLERY = [
-  { id: "barn-109", w: 1600, h: 1067, alt: "gallery.alt.barn" },
+  { id: "barn-109", w: 1600, h: 1067, alt: "gallery.alt.barn", featured: true },
   { id: "barn-54",  w: 1067, h: 1600, alt: "gallery.alt.barn" },
   { id: "wedding-45", w: 1600, h: 1067, alt: "gallery.alt.wedding" },
   { id: "barn-55",  w: 1067, h: 1600, alt: "gallery.alt.barn" },

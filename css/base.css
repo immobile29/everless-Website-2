@@ -303,3 +303,9 @@ input[type="date"]::-webkit-datetime-edit { padding: 0; }
 input[type="date"]::-webkit-datetime-edit-fields-wrapper { color: var(--text); }
 input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: .85; }
 input:-webkit-autofill, input:-webkit-autofill:focus { -webkit-text-fill-color: var(--text); box-shadow: 0 0 0 1000px var(--bg) inset; }
+
+.gallery-featured { margin-bottom: 1rem; }
+.gallery-featured:empty { display: none; }
+.gallery-featured .gallery-item { margin: 0; }
+.gallery-featured .gallery-item img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 40%; }
+@media (max-width: 640px) { .gallery-featured { margin-bottom: .6rem; } .gallery-featured .gallery-item img { aspect-ratio: 4 / 3; } }

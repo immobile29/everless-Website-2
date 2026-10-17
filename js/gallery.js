@@ -9,8 +9,11 @@
   var current = 0;
   var lastFocus = null;
 
+  var featured = document.getElementById("gallery-featured");
+
   function render() {
     grid.innerHTML = "";
+    if (featured) featured.innerHTML = "";
     items.forEach(function (it, i) {
       var b = document.createElement("button");
       b.type = "button";
@@ -18,14 +21,16 @@
       b.setAttribute("aria-label", E.t("gallery.open") + ": " + E.t(it.alt));
       b.dataset.index = i;
       var im = document.createElement("img");
-      im.src = "assets/img/thumbs/" + it.id + ".webp";
+      var big = it.featured && featured;
+      im.src = (big ? "assets/img/gallery/" : "assets/img/thumbs/") + it.id + ".webp";
       im.alt = E.t(it.alt);
-      im.width = Math.round(it.w * 0.4);
-      im.height = Math.round(it.h * 0.4);
-      im.loading = "lazy";
+      im.width = big ? it.w : Math.round(it.w * 0.4);
+      im.height = big ? it.h : Math.round(it.h * 0.4);
+      im.loading = big ? "eager" : "lazy";
       im.decoding = "async";
       b.appendChild(im);
-      grid.appendChild(b);
+      if (big) { b.classList.add("gallery-featured-item"); featured.appendChild(b); }
+      else grid.appendChild(b);
     });
   }
 
@@ -55,9 +60,12 @@
     if (lastFocus) lastFocus.focus();
   }
 
-  grid.addEventListener("click", function (e) {
-    var b = e.target.closest(".gallery-item");
-    if (b) open(+b.dataset.index);
+  [grid, featured].forEach(function (c) {
+    if (!c) return;
+    c.addEventListener("click", function (e) {
+      var b = e.target.closest(".gallery-item");
+      if (b) open(+b.dataset.index);
+    });
   });
   box.querySelector(".lb-close").addEventListener("click", close);
   box.querySelector(".lb-prev").addEventListener("click", function () { show(current - 1); });
