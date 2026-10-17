@@ -230,7 +230,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 560px) { .field-row { grid-template-columns: minmax(0, 1fr); } }
 label { display: block; font-weight: 600; margin-bottom: .35rem; font-size: .98rem; }
 label small { color: var(--muted); font-weight: 400; }
-input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"], select, textarea {
   width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
   padding: .75rem .9rem; min-height: 46px; font-size: 1rem;
 }
@@ -294,3 +294,12 @@ html.locked body > *:not(.gate) { display: none !important; }
 .footer-links a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
 .footer-links a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 2rem; }
+
+/* Päivävalitsin: sama ilme kuin muilla kentillä */
+input[type="date"] { appearance: none; -webkit-appearance: none; color-scheme: dark; display: block; line-height: 1.4; }
+[data-theme="modern"] input[type="date"] { color-scheme: light; }
+input[type="date"]::-webkit-date-and-time-value { text-align: left; }
+input[type="date"]::-webkit-datetime-edit { padding: 0; }
+input[type="date"]::-webkit-datetime-edit-fields-wrapper { color: var(--text); }
+input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: .85; }
+input:-webkit-autofill, input:-webkit-autofill:focus { -webkit-text-fill-color: var(--text); box-shadow: 0 0 0 1000px var(--bg) inset; }
