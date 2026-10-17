@@ -30,7 +30,6 @@ window.EVERLESS_GALLERY = [
   { id: "barn-141", w: 1067, h: 1600, alt: "gallery.alt.barn" },
   { id: "wedding-46", w: 1600, h: 1067, alt: "gallery.alt.wedding" },
   { id: "barn-102", w: 1067, h: 1600, alt: "gallery.alt.barn" },
-  { id: "barn-137", w: 1067, h: 1600, alt: "gallery.alt.barn" },
   { id: "barn-107", w: 1067, h: 1600, alt: "gallery.alt.barn" },
   { id: "wedding-48b", w: 1600, h: 1067, alt: "gallery.alt.wedding" },
   { id: "barn-105", w: 1067, h: 1600, alt: "gallery.alt.barn" },
