@@ -88,7 +88,7 @@ window.EVERLESS_I18N.en = {
   "videos.soon": "Video coming soon",
 
   "rep.eyebrow": "Repertoire",
-  "rep.title": "What we play",
+  "rep.title": "Our songs",
   "rep.lead": "{songs} songs across three genres. Press the play button for a 30-second preview of the original track. For requested songs, see the <a href=\"index.html#terms\">terms</a>.",
   "rep.all": "All",
   "rep.search": "Search artist or song",

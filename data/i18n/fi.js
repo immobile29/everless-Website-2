@@ -88,7 +88,7 @@ window.EVERLESS_I18N.fi = {
   "videos.soon": "Video tulossa pian",
 
   "rep.eyebrow": "Repertuaari",
-  "rep.title": "Mitä osaamme soittaa",
+  "rep.title": "Kappaleemme",
   "rep.lead": "{songs} biisiä kolmesta genrestä. Paina toistopainiketta kuunnellaksesi 30 sekunnin esimaistiaisen alkuperäisestä kappaleesta. Toivekappaleista lisää <a href=\"index.html#terms\">ehdoissa</a>.",
   "rep.all": "Kaikki",
   "rep.search": "Hae artistia tai biisiä",
