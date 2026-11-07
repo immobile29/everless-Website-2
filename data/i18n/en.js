@@ -167,7 +167,7 @@ window.EVERLESS_I18N.en = {
   "page.gallery.lead": "Members and DJs.",
   "terms.eyebrow": "Terms",
   "terms.title": "Booking terms",
-  "terms.lead": "How we agree on gigs. These terms apply to all bookings.",
+  "terms.lead": "These terms apply to all bookings.",
   "terms.cancel.title": "Cancellation terms",
   "terms.cancel.text": "If the booking is cancelled over 90 days before the event, 10 % of the agreed price will be charged. If the booking is cancelled 15–90 days before the event, 50 % of the agreed price will be charged. If the booking is cancelled less than 15 days before the start of the event, 100 % of the agreed price will be charged. In the event of the performance being canceled due to force majeure reasons (such as a natural disaster or a state of war), no compensation liability will arise for either party. It is the band's obligation to perform the agreed-upon gig; however, the band has the right to use competent substitutes if necessary.",
   "terms.songs.title": "Request songs",

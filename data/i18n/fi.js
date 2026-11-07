@@ -167,7 +167,7 @@ window.EVERLESS_I18N.fi = {
   "page.gallery.lead": "Kokoonpano ja DJ:t.",
   "terms.eyebrow": "Ehdot",
   "terms.title": "Varausehdot",
-  "terms.lead": "Näin sovimme keikoista. Ehdot koskevat kaikkia varauksia.",
+  "terms.lead": "Ehdot koskevat kaikkia varauksia.",
   "terms.cancel.title": "Peruutusehdot",
   "terms.cancel.text": "Jos varaus peruutetaan yli 90 vrk ennen tilaisuutta, veloitetaan 10 % sovitusta hinnasta. Jos varaus peruutetaan 15–90 vrk ennen tilaisuutta, veloitetaan 50 % sovitusta hinnasta. Mikäli sovittu varaus peruutetaan alle 15 vrk ennen tilaisuuden alkua, veloitetaan 100 % sovitusta hinnasta. Esiintymisen peruuntuessa force majeure -syistä (esim. luonnonkatastrofi, sotatila) ei osapuolille synny korvausvelvollisuutta. Bändin velvollisuutena on soittaa sovittu keikka; bändillä on kuitenkin tarvittaessa oikeus käyttää päteviä tuuraajia.",
   "terms.songs.title": "Toivekappaleet",
