@@ -70,7 +70,7 @@ window.EVERLESS_I18N.fi = {
   "members.band": "Bändi",
   "members.photo.alt": "Everlessin soittajat nahkasohvilla puupinon edessä",
   "members.djs": "DJ:t",
-  "members.djs.text": "Bändin lisäksi Everlessiin kuuluvat DJ:t Aspect ja Alwar. Heiltä onnistuu tanssittava setti myös ilman bändiä.",
+  "members.djs.text": "Bändin lisäksi Everlessiin kuuluvat DJ:t Aspect ja Alwar.",
   "members.djs.alt": "DJ:t Aspect ja Alwar punaisen lato-rakennuksen edessä",
   "role.drums": "Rummut",
   "role.keys": "Koskettimet & laulu",

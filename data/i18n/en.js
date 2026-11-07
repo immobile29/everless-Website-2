@@ -70,7 +70,7 @@ window.EVERLESS_I18N.en = {
   "members.band": "Band",
   "members.photo.alt": "The Everless players on a leather sofa in front of a stack of firewood",
   "members.djs": "DJs",
-  "members.djs.text": "Besides the band, Everless includes the DJs Aspect and Alwar. They can deliver a danceable set without the band, too.",
+  "members.djs.text": "Besides the band, Everless includes the DJs Aspect and Alwar.",
   "members.djs.alt": "DJs Aspect and Alwar in front of a red barn building",
   "role.drums": "Drums",
   "role.keys": "Keyboards & vocals",
