@@ -92,7 +92,7 @@ window.EVERLESS_I18N.en = {
 
   "videos.eyebrow": "Videos",
   "videos.title": "Hear and see us live",
-  "videos.lead": "Clips from real gigs.",
+  "videos.lead": "Clips from our gigs.",
   "videos.play": "Play video",
   "videos.soon": "Video coming soon",
 
