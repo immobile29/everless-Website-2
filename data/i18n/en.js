@@ -96,7 +96,7 @@ window.EVERLESS_I18N.en = {
   "videos.play": "Play video",
   "videos.soon": "Video coming soon",
 
-  "rep.eyebrow": "Repertoire",
+  "rep.eyebrow": "Songs",
   "rep.title": "Our songs",
   "rep.lead": "Press the play button for a 30-second preview of the original track. For requested songs, see the <a href=\"ehdot.html\">terms</a>.",
   "rep.all": "All",
