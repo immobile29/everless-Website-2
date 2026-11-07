@@ -73,7 +73,7 @@ window.EVERLESS_I18N.fi = {
   "members.djs.text": "Bändin lisäksi Everlessiin kuuluvat DJ:t Aspect ja Alwar. Heiltä onnistuu tanssittava setti myös ilman bändiä.",
   "members.djs.alt": "DJ:t Aspect ja Alwar punaisen lato-rakennuksen edessä",
   "role.drums": "Rummut",
-  "role.keys": "Koskettimet",
+  "role.keys": "Koskettimet & laulu",
   "role.guitarVocals": "Kitara & laulu",
   "role.bass": "Basso",
   "role.vocals": "Laulu",

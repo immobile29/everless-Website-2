@@ -73,7 +73,7 @@ window.EVERLESS_I18N.en = {
   "members.djs.text": "Besides the band, Everless includes the DJs Aspect and Alwar. They can deliver a danceable set without the band, too.",
   "members.djs.alt": "DJs Aspect and Alwar in front of a red barn building",
   "role.drums": "Drums",
-  "role.keys": "Keyboards",
+  "role.keys": "Keyboards & vocals",
   "role.guitarVocals": "Guitar & vocals",
   "role.bass": "Bass",
   "role.vocals": "Vocals",
