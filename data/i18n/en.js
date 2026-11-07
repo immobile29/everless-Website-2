@@ -66,7 +66,7 @@ window.EVERLESS_I18N.en = {
 
   "members.eyebrow": "The band",
   "members.title": "Meet Everless",
-  "members.lead": "Seven players and singers, two DJs and a shared passion for good music.",
+  "members.lead": "A seven-piece band and two DJs. A shared passion for music.",
   "members.band": "Band",
   "members.photo.alt": "The Everless players on a leather sofa in front of a stack of firewood",
   "members.djs": "DJs",

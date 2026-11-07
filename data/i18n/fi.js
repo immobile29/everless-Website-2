@@ -66,7 +66,7 @@ window.EVERLESS_I18N.fi = {
 
   "members.eyebrow": "Kokoonpano",
   "members.title": "Tutustu bändiin",
-  "members.lead": "Seitsemän soittajaa ja laulajaa, kaksi DJ:tä ja yhteinen intohimo hyvään musiikkiin.",
+  "members.lead": "Seitsemän hengen bändi ja kaksi DJ:tä. Yhteinen intohimo musiikkiin.",
   "members.band": "Bändi",
   "members.photo.alt": "Everlessin soittajat nahkasohvilla puupinon edessä",
   "members.djs": "DJ:t",
