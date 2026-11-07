@@ -3,7 +3,7 @@ window.EVERLESS_I18N = window.EVERLESS_I18N || {};
 window.EVERLESS_I18N.en = {
   "meta.title.home": "Everless – Cover band & DJs for weddings, Christmas parties and events",
   "meta.title.gallery": "The band – Everless",
-  "meta.title.repertoire": "Repertoire – Everless",
+  "meta.title.repertoire": "Songs – Everless",
   "meta.description.home": "Everless is a seven-piece cover band (rock, pop and country) and DJ service for weddings, Christmas parties, birthdays, anniversaries and other events. Request a quote.",
   "meta.description.gallery": "Meet the members and DJs of Everless.",
   "meta.description.repertoire": "The Everless repertoire: pop, rock and country songs with search and 30-second previews.",
@@ -14,7 +14,7 @@ window.EVERLESS_I18N.en = {
   "a11y.lang": "Language",
 
   "nav.gallery": "The band",
-  "nav.repertoire": "Repertoire",
+  "nav.repertoire": "Songs",
   "nav.terms": "Terms",
   "meta.title.terms": "Booking terms – Everless",
   "meta.description.terms": "Everless booking terms: cancellation, requested songs and confirmation of agreement.",
@@ -169,7 +169,7 @@ window.EVERLESS_I18N.en = {
   "terms.title": "Booking terms",
   "terms.lead": "How we agree on gigs. These terms apply to all bookings.",
   "terms.cancel.title": "Cancellation terms",
-  "terms.cancel.text": "If the cancellation of the band is made over 90 days before the event, 10 % of the agreed price will be charged. If the cancellation of the band is made 15–90 days before the event, 50 % of the agreed price will be charged. If the reservation is canceled less than 15 days before the start of the event, 100 % of the agreed price will be charged. In the event of the performance being canceled due to force majeure reasons (such as a natural disaster or a state of war), no compensation liability will arise for either party. It is the band's obligation to perform the agreed-upon gig; however, the band has the right to use competent substitutes if necessary.",
+  "terms.cancel.text": "If the booking is cancelled over 90 days before the event, 10 % of the agreed price will be charged. If the booking is cancelled 15–90 days before the event, 50 % of the agreed price will be charged. If the booking is cancelled less than 15 days before the start of the event, 100 % of the agreed price will be charged. In the event of the performance being canceled due to force majeure reasons (such as a natural disaster or a state of war), no compensation liability will arise for either party. It is the band's obligation to perform the agreed-upon gig; however, the band has the right to use competent substitutes if necessary.",
   "terms.songs.title": "Request songs",
   "terms.songs.text": "Any requested songs not included in the band's standard repertoire must be provided at least 60 days before the event. The band cannot guarantee the performance of songs requested later than this.",
   "terms.confirm.title": "Confirmation of agreement",

@@ -3,7 +3,7 @@ window.EVERLESS_I18N = window.EVERLESS_I18N || {};
 window.EVERLESS_I18N.fi = {
   "meta.title.home": "Everless – Cover-bändi ja DJ häihin, pikkujouluihin ja juhliin",
   "meta.title.gallery": "Bändi – Everless",
-  "meta.title.repertoire": "Repertuaari – Everless",
+  "meta.title.repertoire": "Kappaleet – Everless",
   "meta.description.home": "Everless on seitsemänhenkinen cover-bändi (rock, pop ja country) sekä DJ-palvelu häihin, pikkujouluihin, syntymäpäiviin, vuosijuhliin ja muihin tapahtumiin. Pyydä tarjous.",
   "meta.description.gallery": "Tutustu Everlessin jäseniin ja DJ:hin.",
   "meta.description.repertoire": "Everlessin repertuaari: pop-, rock- ja country-biisit hakuineen ja 30 sekunnin esikuunteluineen.",
@@ -14,7 +14,7 @@ window.EVERLESS_I18N.fi = {
   "a11y.lang": "Kieli",
 
   "nav.gallery": "Bändi",
-  "nav.repertoire": "Repertuaari",
+  "nav.repertoire": "Kappaleet",
   "nav.terms": "Ehdot",
   "meta.title.terms": "Varausehdot – Everless",
   "meta.description.terms": "Everlessin varausehdot: peruutusehdot, toivekappaleet ja sopimuksen vahvistaminen.",
@@ -96,7 +96,7 @@ window.EVERLESS_I18N.fi = {
   "videos.play": "Toista video",
   "videos.soon": "Video tulossa pian",
 
-  "rep.eyebrow": "Repertuaari",
+  "rep.eyebrow": "Kappaleet",
   "rep.title": "Kappaleemme",
   "rep.lead": "Paina toistopainiketta kuunnellaksesi 30 sekunnin esimaistiaisen alkuperäisestä kappaleesta. Toivekappaleista lisää <a href=\"ehdot.html\">ehdoissa</a>.",
   "rep.all": "Kaikki",
@@ -169,7 +169,7 @@ window.EVERLESS_I18N.fi = {
   "terms.title": "Varausehdot",
   "terms.lead": "Näin sovimme keikoista. Ehdot koskevat kaikkia varauksia.",
   "terms.cancel.title": "Peruutusehdot",
-  "terms.cancel.text": "Jos bändin peruutus tehdään yli 90 vrk ennen tilaisuutta, veloitetaan 10 % sovitusta hinnasta. Jos bändin peruutus tehdään 15–90 vrk ennen tilaisuutta, veloitetaan 50 % sovitusta hinnasta. Mikäli sovittu varaus peruutetaan alle 15 vrk ennen tilaisuuden alkua, veloitetaan 100 % sovitusta hinnasta. Esiintymisen peruuntuessa force majeure -syistä (esim. luonnonkatastrofi, sotatila) ei osapuolille synny korvausvelvollisuutta. Bändin velvollisuutena on soittaa sovittu keikka; bändillä on kuitenkin tarvittaessa oikeus käyttää päteviä tuuraajia.",
+  "terms.cancel.text": "Jos varaus peruutetaan yli 90 vrk ennen tilaisuutta, veloitetaan 10 % sovitusta hinnasta. Jos varaus peruutetaan 15–90 vrk ennen tilaisuutta, veloitetaan 50 % sovitusta hinnasta. Mikäli sovittu varaus peruutetaan alle 15 vrk ennen tilaisuuden alkua, veloitetaan 100 % sovitusta hinnasta. Esiintymisen peruuntuessa force majeure -syistä (esim. luonnonkatastrofi, sotatila) ei osapuolille synny korvausvelvollisuutta. Bändin velvollisuutena on soittaa sovittu keikka; bändillä on kuitenkin tarvittaessa oikeus käyttää päteviä tuuraajia.",
   "terms.songs.title": "Toivekappaleet",
   "terms.songs.text": "Mahdolliset toivekappaleet, joita ei kuulu bändin vakiorepertuaariin, tulee ilmoittaa viimeistään 60 vrk ennen tilaisuutta. Myöhemmin ilmoitetuista kappaleista bändi ei voi taata esitystä.",
   "terms.confirm.title": "Sopimuksen vahvistaminen",
