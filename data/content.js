@@ -44,5 +44,5 @@ window.EVERLESS_GALLERY = [
 // Tunnus on osoitteessa youtube.com/watch?v=TÄSTÄ_TULEE_TUNNUS
 window.EVERLESS_VIDEOS = [
   { title: "I Wanna Dance with Somebody", artist: "Whitney Houston", youtubeId: "ETzgYsCAyHc" },
-  { title: "You're Gonna Go Far, Kid",    artist: "The Offspring",   youtubeId: "7olwNNpNZ38" },
+  { title: "You're Gonna Go Far, Kid",    artist: "Karkkila 2026",    youtubeId: "7olwNNpNZ38" },
 ];
