@@ -77,7 +77,6 @@ window.EVERLESS_SONGS = {
   country: [
     { artist: "Chris Norman & Suzi Quatro", title: "Stumblin' In" },
     { artist: "Creedence Clearwater Revival", title: "Proud Mary" },
-    { artist: "Ennio Morricone", title: "The Good, the Bad and the Ugly (instrumental)", q: "Ennio Morricone The Good, the Bad and the Ugly" },
     { artist: "Glen Campbell", title: "Rhinestone Cowboy" },
     { artist: "Gordon Lightfoot", title: "The Wreck of the Edmund Fitzgerald" },
     { artist: "John Denver", title: "Annie's Song" },
