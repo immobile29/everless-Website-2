@@ -92,7 +92,7 @@ window.EVERLESS_I18N.fi = {
 
   "videos.eyebrow": "Videot",
   "videos.title": "Kuule ja näe meidät livenä",
-  "videos.lead": "Otteita oikeilta keikoilta.",
+  "videos.lead": "Otteita keikoilta.",
   "videos.play": "Toista video",
   "videos.soon": "Video tulossa pian",
 
