@@ -35,7 +35,7 @@ window.EVERLESS_CONFIG = {
 
   // Repertuaarin esikuuntelut haetaan Applen iTunes Search API:sta (30 s).
   previews: {
-    enabled: false,
+    enabled: true,
     country: "FI", // kauppa, josta haetaan (FI löytää myös suomalaiset biisit)
   },
 };
