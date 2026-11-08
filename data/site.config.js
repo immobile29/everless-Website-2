@@ -14,7 +14,7 @@ window.EVERLESS_CONFIG = {
   // Aseta enabled: false, kun sivusto julkaistaan kaikille.
   // Uusi salasana: aja  printf %s "uusisalasana" | shasum -a 256  ja liitä tulos sha256-kenttään.
   gate: {
-    enabled: true,
+    enabled: false,
     sha256: "1eb69cb48eb9cc8ec1762d054ee52aff7bff0624e718972cc9918ffff93a5663",
   },
 
@@ -35,7 +35,7 @@ window.EVERLESS_CONFIG = {
 
   // Repertuaarin esikuuntelut haetaan Applen iTunes Search API:sta (30 s).
   previews: {
-    enabled: true,
+    enabled: false,
     country: "FI", // kauppa, josta haetaan (FI löytää myös suomalaiset biisit)
   },
 };
