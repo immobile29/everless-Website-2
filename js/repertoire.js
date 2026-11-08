@@ -3,7 +3,7 @@
   var E = window.Everless;
   var cfg = window.EVERLESS_CONFIG.previews || {};
   var data = window.EVERLESS_SONGS;
-  var GENRES = ["pop", "rock", "country"];
+  var GENRES = ["pop", "rock", "country", "other"]; // "other" = kappaleet, jotka eivät kuulu kolmeen ensimmäiseen
 
   var songs = [];
   GENRES.forEach(function (g) {
@@ -41,6 +41,7 @@
     tabsEl.innerHTML = "";
     ["all"].concat(GENRES).forEach(function (g) {
       var n = g === "all" ? songs.length : (data[g] || []).length;
+      if (g === "other" && !n) return; // tyhjää "Muut"-välilehteä ei näytetä
       var b = document.createElement("button");
       b.type = "button"; b.className = "tab"; b.setAttribute("role", "tab");
       b.setAttribute("aria-selected", String(state.genre === g));

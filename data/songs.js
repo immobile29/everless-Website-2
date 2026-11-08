@@ -1,5 +1,5 @@
 /*
-  REPERTUAARI
+  REPERTUAARI (genret: pop, rock, country, other)
   Lisää tai poista biisejä muokkaamalla listoja. Kentät:
     artist, title   – näytettävät nimet
     q               – (valinnainen) oma hakusana esikuuntelun löytämiseksi
@@ -86,4 +86,6 @@ window.EVERLESS_SONGS = {
     { artist: "The Highwaymen", title: "Highwayman" },
     { artist: "Tom T. Hall", title: "I Like Beer" },
   ],
+  // Kappaleet, jotka eivät sovi pop-, rock- tai country-luokkiin. Välilehti näkyy vasta kun tähän lisätään biisi.
+  other: [],
 };

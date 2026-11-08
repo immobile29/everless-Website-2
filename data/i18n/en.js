@@ -59,6 +59,7 @@ window.EVERLESS_I18N.en = {
   "genres.pop.text": "Sing-along hits from ABBA to Taylor Swift, plus Finnish classics from Kaija Koo to PMMP.",
   "genres.rock.title": "Rock",
   "genres.rock.text": "Riffs and big choruses: AC/DC, Metallica, Dire Straits, Eppu Normaali and J. Karjalainen.",
+  "genres.other.title": "Other",
   "genres.country.title": "Country",
   "genres.country.text": "Johnny Cash, John Denver and The Highwaymen with a barn and saloon feel.",
   "genres.songs": "{n} songs",

@@ -59,6 +59,7 @@ window.EVERLESS_I18N.fi = {
   "genres.pop.text": "Yhteislaulettavat hitit ABBAsta Taylor Swiftiin sekä suomalaiset klassikot Kaija Koosta PMMP:hen.",
   "genres.rock.title": "Rock",
   "genres.rock.text": "Riffejä ja isoja kertosäkeitä: AC/DC, Metallica, Dire Straits, Eppu Normaali ja J. Karjalainen.",
+  "genres.other.title": "Muut",
   "genres.country.title": "Country",
   "genres.country.text": "Johnny Cashia, John Denveriä ja Highwaymenia lato- ja saluunatunnelmalla.",
   "genres.songs": "{n} biisiä",
