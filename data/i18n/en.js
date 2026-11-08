@@ -173,7 +173,7 @@ window.EVERLESS_I18N.en = {
   "terms.cancel.title": "Cancellation terms",
   "terms.cancel.text": "If the booking is cancelled over 90 days before the event, 10 % of the agreed price will be charged. If the booking is cancelled 15–90 days before the event, 50 % of the agreed price will be charged. If the booking is cancelled less than 15 days before the start of the event, 100 % of the agreed price will be charged. In the event of the performance being canceled due to force majeure reasons (such as a natural disaster or a state of war), no compensation liability will arise for either party. It is the band's obligation to perform the agreed-upon gig; however, the band has the right to use competent substitutes if necessary.",
   "terms.songs.title": "Request songs",
-  "terms.songs.text": "Any requested songs not included in the band's standard repertoire must be provided at least 60 days before the event. The band cannot guarantee the performance of songs requested later than this.",
+  "terms.songs.text": "Any requested songs not included in the band's standard repertoire must be provided at least 60 days before the event. The band cannot guarantee the performance of songs requested later than this. Requested songs are always considered on a case-by-case basis, and the band cannot guarantee that every requested song is possible to play.",
   "terms.confirm.title": "Confirmation of agreement",
   "terms.confirm.text": "To confirm the agreement, a message from both parties is sufficient, meaning that a signed contract is not required as long as the messages are acknowledged by both parties. However, a separate signed contract can be made at the customer's request, in which case the conditions defined in the separate contract will be used.",
 };

@@ -173,7 +173,7 @@ window.EVERLESS_I18N.fi = {
   "terms.cancel.title": "Peruutusehdot",
   "terms.cancel.text": "Jos varaus peruutetaan yli 90 vrk ennen tilaisuutta, veloitetaan 10 % sovitusta hinnasta. Jos varaus peruutetaan 15–90 vrk ennen tilaisuutta, veloitetaan 50 % sovitusta hinnasta. Mikäli sovittu varaus peruutetaan alle 15 vrk ennen tilaisuuden alkua, veloitetaan 100 % sovitusta hinnasta. Esiintymisen peruuntuessa force majeure -syistä (esim. luonnonkatastrofi, sotatila) ei osapuolille synny korvausvelvollisuutta. Bändin velvollisuutena on soittaa sovittu keikka; bändillä on kuitenkin tarvittaessa oikeus käyttää päteviä tuuraajia.",
   "terms.songs.title": "Toivekappaleet",
-  "terms.songs.text": "Mahdolliset toivekappaleet, joita ei kuulu bändin vakiorepertuaariin, tulee ilmoittaa viimeistään 60 vrk ennen tilaisuutta. Myöhemmin ilmoitetuista kappaleista bändi ei voi taata esitystä.",
+  "terms.songs.text": "Mahdolliset toivekappaleet, joita ei kuulu bändin vakiorepertuaariin, tulee ilmoittaa viimeistään 60 vrk ennen tilaisuutta. Myöhemmin ilmoitetuista kappaleista bändi ei voi taata esitystä. Toivekappaleet katsotaan aina tapauskohtaisesti, eikä bändi voi taata, että kaikkia toivekappaleita on mahdollista soittaa.",
   "terms.confirm.title": "Sopimuksen vahvistaminen",
   "terms.confirm.text": "Sopimuksen vahvistukseksi riittää viesti molemmin puolin, eli allekirjoitettua sopimusta ei tarvita, kunhan viestit on kuitattu molemminpuolisesti. Erillinen allekirjoitettu sopimus voidaan kuitenkin tehdä asiakkaan toiveesta, ja silloin käytetään erillisessä sopimuksessa määriteltyjä ehtoja.",
 };
